@@ -8,15 +8,18 @@
     <title>[Your Real Name] - Game Developer Portfolio</title>
     
     <style>
-        /* Import Roboto font from Google Fonts */
+        /* Import Fonts from Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+        
         /* Basic Reset & Global Styles */
         :root {
             --background-color: #1e1e1e;
             --text-color: #f0f0f0;
             --accent-color: #00aaff;
+            --secondary-bg-color: #2a2a2a;
             --container-width: 900px;
+            --border-radius: 8px;
+            --transition-speed: 0.3s ease;
         }
 
         * {
@@ -25,19 +28,39 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
             background-color: var(--background-color);
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.7;
             font-size: 18px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         /* Main Container Layout */
         .container {
             max-width: var(--container-width);
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
+            opacity: 0; /* Initially hidden for animation */
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Typography */
@@ -49,27 +72,34 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             text-align: center;
             margin-bottom: 10px;
         }
         
-        h1 + h2 { /* The game title right after the main name */
+        .subtitle {
             text-align: center;
             font-size: 1.8rem;
             margin-top: 0;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
+            font-weight: 400;
+            color: var(--text-color);
         }
         
         h2 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             border-bottom: 2px solid var(--accent-color);
             padding-bottom: 10px;
-            margin-top: 50px;
+            margin-top: 60px; /* Increased margin for better separation */
         }
         
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
         }
 
         p {
@@ -79,10 +109,11 @@
         a {
             color: var(--accent-color);
             text-decoration: none;
+            transition: color var(--transition-speed);
         }
 
         a:hover {
-            text-decoration: underline;
+            color: #4dc4ff;
         }
 
         /* Responsive Media: Video, Images, GIFs */
@@ -92,6 +123,8 @@
             height: 0;
             overflow: hidden;
             margin-bottom: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
         }
 
         .video-wrapper iframe {
@@ -106,21 +139,27 @@
             max-width: 100%;
             height: auto;
             display: block;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+        
+        img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
         }
 
         /* Section Specific Styles */
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
 
         .technical-highlight {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 40px;
             align-items: center;
-            margin-bottom: 40px;
+            margin-top: 40px;
         }
 
         .technical-highlight .text-content {
@@ -137,21 +176,81 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            margin-top: 20px;
+            margin-top: 30px;
+        }
+        
+        /* Tools & Technologies Section */
+        .tech-stack {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .tech-stack li {
+            background-color: var(--secondary-bg-color);
+            color: var(--text-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
+        /* Contact Section */
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform var(--transition-speed);
+        }
+
+        .contact-links a:hover {
+            transform: translateY(-3px);
+            color: #4dc4ff;
+        }
+        
+        .contact-links .fa-fw {
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 0.9rem;
+        }
     </style>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
 
     <div class="container">
-        <header class="section">
-            <h1>[Your Real Name] ([Your Alias])</h1>
-            <h2>[The Name of Your Game]</h2>
+        <header>
+            <h1>[Your Real Name]</h1>
+            <p class="subtitle">Game Developer Portfolio // <a href="#contact">[Your Alias]</a></p>
         </header>
         
         <main>
             <section class="section">
+                <h2>[The Name of Your Game]</h2>
                 <div class="video-wrapper">
                     [Paste the full <iframe> embed code from YouTube here]
                 </div>
@@ -169,6 +268,18 @@
                 <p>
                     [Write your "As a solo developer..." paragraph here]
                 </p>
+            </section>
+
+            <section class="section">
+                <h2>Tools & Technologies</h2>
+                <ul class="tech-stack">
+                    <li>Unity</li>
+                    <li>C#</li>
+                    <li>HLSL</li>
+                    <li>Blender</li>
+                    <li>Photoshop</li>
+                    <li>Git</li>
+                    </ul>
             </section>
             
             <section class="section">
@@ -197,7 +308,6 @@
                         <img src="[filename2.gif]" alt="[Title of your second skill, e.g., 'Procedural VFX System']">
                     </div>
                 </div>
-
             </section>
             
             <section class="section">
@@ -209,7 +319,19 @@
                 </div>
             </section>
 
+            <section class="section" id="contact">
+                <h2>Contact Me</h2>
+                <div class="contact-links">
+                    <a href="mailto:youremail@example.com"><i class="fa-solid fa-envelope fa-fw"></i>Email</a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fa-brands fa-linkedin fa-fw"></i>LinkedIn</a>
+                    <a href="https://github.com/yourusername" target="_blank"><i class="fa-brands fa-github fa-fw"></i>GitHub</a>
+                </div>
+            </section>
         </main>
+        
+        <footer>
+            <p>&copy; 2025 [Your Real Name]. All Rights Reserved.</p>
+        </footer>
     </div>
 
 </body>
