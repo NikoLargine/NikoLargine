@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Nicholas Morris (Niko) | Game Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* --- CSS --- */
+
+        /* ------------------- */
+        /* 1. Global Styles & Variables */
+        /* ------------------- */
+        :root {
+            --bg-color: #121212;
+            --panel-color: #1E1E1E;
+            --accent-color: #00BFFF;
+            --text-color: #EAEAEA;
+            --text-muted: #a0a0a0;
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+            --container-width: 1000px;
+            --transition-speed: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            font-size: 18px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .main-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+            opacity: 0; /* Hidden for scroll animation */
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--accent-color);
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 191, 255, 0.2);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        /* ------------------- */
+        /* 2. Hero Section */
+        /* ------------------- */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            /* For a static image background */
+             background: url('GOUCover.png') no-repeat center center/cover;
+        }
+        
+        .hero::after { /* Dark overlay */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+        }
+        
+        .hero h2 {
+            font-size: 1.5rem;
+            font-family: var(--font-body);
+            border: none;
+            margin-bottom: 40px;
+            color: var(--text-color);
+        }
+
+        .hero-button {
+            background-color: var(--accent-color);
+            color: #121212;
+            padding: 15px 35px;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            text-transform: uppercase;
+        }
+        
+        .hero-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 191, 255, 0.3);
+            color: #121212;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            z-index: 10;
+        }
+
+        .back-link:hover {
+            color: white;
+            transform: translateX(-5px);
+        }
+
+        .back-link i {
+            margin-right: 8px;
+        }
+
+        /* Make it responsive for mobile */
+        @media (max-width: 768px) {
+            .back-link {
+                top: 20px;
+                left: 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ------------------- */
+        /* 3. Content Sections */
+        /* ------------------- */
+        .content-card {
+            background-color: var(--panel-color);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Video Embed */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Role & Responsibilities */
+        .role-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .role-list li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .role-list li::before {
+            content: '\f00c'; /* Font Awesome check mark */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: var(--accent-color);
+        }
+
+        /* Project Page External Links Button */
+        .project-links {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .project-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: transparent;
+            color: var(--accent-color);
+            padding: 12px 25px;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            border: 2px solid var(--accent-color);
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .project-button:hover {
+            background-color: var(--accent-color);
+            color: #121212; /* Dark background color for text */
+            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .project-button i {
+            font-size: 1.2rem;
+        }
+
+        /* Tools & Technologies */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        .tech-item {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+        .tech-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 191, 255, 0.15);
+        }
+        .tech-item i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+        .tech-item span {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        /* Technical Deep Dive */
+        .deep-dive {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .deep-dive .text-content, .deep-dive .media-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        .deep-dive .media-content img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        }
+        /* Alternating layout */
+        .deep-dive:nth-child(even) {
+             flex-direction: row-reverse;
+        }
+        
+        /* Screenshot Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 191, 255, 0.2);
+        }
+
+        /* Contact */
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: 2px solid transparent;
+            border-radius: 50px;
+            transition: all var(--transition-speed);
+        }
+        .contact-links a:hover {
+            color: white;
+            border-color: var(--accent-color);
+            background-color: rgba(0, 191, 255, 0.1);
+        }
+        .contact-links i {
+            font-size: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        /* ------------------- */
+        /* 4. Lightbox (for Gallery) */
+        /* ------------------- */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none; /* Initially hidden */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            transition: transform var(--transition-speed);
+        }
+        .lightbox-close:hover {
+            transform: scale(1.2);
+        }
+
+        /* ------------------- */
+        /* 5. Responsive Design */
+        /* ------------------- */
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.2rem; }
+            .hero h2 { font-size: 1.2rem; }
+            .content-card { padding: 30px; }
+
+            .deep-dive, .deep-dive:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+            <h1>Ghost Of Us</h1>
+            <h2>A Game by Niko Largine</h2>
+            <a href="#overview" class="hero-button">View Project</a>
+        </div>
+    </header>
+    
+    <main class="main-content">
+
+        <section id="overview" class="scroll-target">
+            <h2>Overview & Highlight Reel</h2>
+            <div class="content-card">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/L5GFKvOxC2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>After being separated for what seems like an eternity, can a friendship be rekindled into a bond that lasts forever? </p>
+                <div class="project-links">
+            <a href="https://nikolargine.itch.io/ghost-of-us" target="_blank" rel="noopener noreferrer" class="project-button">
+                <i class="fa-brands fa-itch-io"></i> Play on itch.io
+            </a>
+        </div>
+            </div>
+        </section>
+
+        <section id="role" class="scroll-target">
+            <h2>My Role: Solo Developer</h2>
+            <div class="content-card">
+                <p>As a solo developer, the project was created as a fun personal project. The project focuses on Sprite characters, Spine2D playable characters, and a believable, interactable environments to enchance the player experience on their adventure.
+                    It expands on the systems in Trash Through The Dimensions, introducing more streamlined interactions, advanced inventory systems, shop systems, and more </p>
+                <ul class="role-list">
+                    <li>Gameplay Programming & Systems Design (C#)</li>
+                    <li>UI/UX Design & Implementation</li>
+                    <li>Spine2D animated characters</li>
+                    <li>Sprite characters with various poses and expressions</li>
+                    <li>Story and Dialogue</li>
+                    <li>Sound Design & Integration</li>
+                    <li>Game and Level Design</li>
+                    <li>Project Management & Version Control (Git)</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="tech" class="scroll-target">
+            <h2>Tools & Technologies</h2>
+            <div class="content-card">
+                <div class="tech-grid">
+                    <div class="tech-item"><i class="fa-brands fa-unity"></i><span>Unity</span></div>
+                    <div class="tech-item"><i class="fa-solid fa-code"></i><span>C#</span></div>
+                    <div class="tech-item"><i class="fa-solid fa-palette"></i><span>Live2D</span></div>
+                    <div class="tech-item"><i class="fa-solid fa-cube"></i><span>Spine2D</span></div>
+                    <div class="tech-item"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+                    <div class="tech-item"><i class="fa-solid fa-image"></i><span>Photoshop</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="deep-dive" class="scroll-target">
+            <h2>Technical Deep Dive</h2>
+            <div class="content-card">
+                <div class="deep-dive">
+                    <div class="text-content">
+                        <h3>Unity Lighting system</h3>
+                        <p>To enhance the magic of the aquarium experience, runtime states were used to track the aquarium lighting, allowing the player to control and interact with their environment.</p>
+                    </div>
+                    <div class="media-content">
+                        <img src="TrashThroughTheDimensionsGIF1.gif" alt="[Game systems]">
+                    </div>
+                </div>
+                <hr style="border: 1px solid #2a2a2a; margin: 50px 0;">
+                <div class="deep-dive">
+                    <div class="text-content">
+                        <h3>Asset Creation</h3>
+                        <p>The creation of Live2D and Spine2D playable characters</p>
+                    </div>
+                    <div class="media-content">
+                        <img src="TrashThroughTheDimensionsGIF2.gif" alt="Live2D animations">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="scroll-target">
+            <h2>In-Game Gallery</h2>
+            <div class="content-card">
+                <div class="gallery-grid">
+                    <img src="Project1G1.png" alt="Game Screenshot 1">
+                    <img src="Project1G2.png" alt="Game Screenshot 2">
+                    <img src="Project1G3.png" alt="Game Screenshot 3">
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="scroll-target">
+            <h2>Get In Touch</h2>
+            <div class="content-card" style="text-align: center;">
+                <p>I'm currently seeking new opportunities. Feel free to reach out!</p>
+                <div class="contact-links">
+                    <a href="mailto:nikolargine@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+                    <a href="mailto:nicholas_m0rris@hotmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nicholas Morris</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Enlarged Screenshot" class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        // --- JAVASCRIPT ---
+
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 1. On-Scroll Animations
+            // ---------------------------------
+            const targets = document.querySelectorAll('.scroll-target');
+
+            const observerOptions = {
+                root: null, // observes intersections relative to the viewport
+                rootMargin: '0px',
+                threshold: 0.1 // trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // Optional: stop observing the element once it's visible
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            targets.forEach(target => {
+                observer.observe(target);
+            });
+
+
+            // 2. Lightbox Functionality
+            // ---------------------------------
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const galleryImages = document.querySelectorAll('.gallery-grid img');
+            const lightboxClose = document.querySelector('.lightbox-close');
+
+            const openLightbox = (e) => {
+                lightbox.classList.add('active');
+                lightboxImg.src = e.target.src;
+            };
+
+            const closeLightbox = () => {
+                lightbox.classList.remove('active');
+            };
+
+            galleryImages.forEach(img => {
+                img.addEventListener('click', openLightbox);
+            });
+
+            // Close lightbox by clicking close button or overlay
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => {
+                if (e.target !== lightboxImg) {
+                    closeLightbox();
+                }
+            });
+
+            // Close lightbox with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+            
+        });
+    </script>
+</body>
+</html>
