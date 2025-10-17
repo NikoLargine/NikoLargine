@@ -474,7 +474,7 @@
             <h2>My Role: Solo Developer</h2>
             <div class="content-card">
                 <p>As a solo developer, the project was created as a fun personal project. The project focuses on Sprite characters, Spine2D playable characters, and a believable, interactable environments to enchance the player experience on their adventure.
-                    It expands on the systems in Trash Through The Dimensions, introducing more streamlined interactions, advanced inventory systems, shop systems, and more </p>
+                    It expands on the systems in Trash Through The Dimensions, introducing more streamlined interactions, advanced inventory systems, shop systems, and more.</p>
                 <ul class="role-list">
                     <li>Gameplay Programming & Systems Design (C#)</li>
                     <li>UI/UX Design & Implementation</li>
@@ -511,17 +511,88 @@
                         <p>To enhance the magic of the aquarium experience, runtime states were used to track the aquarium lighting, allowing the player to control and interact with their environment.</p>
                     </div>
                     <div class="media-content">
-                        <img src="TrashThroughTheDimensionsGIF1.gif" alt="[Game systems]">
+                        <img src="LightsDemo.gif" alt="[Game systems]">
                     </div>
                 </div>
                 <hr style="border: 1px solid #2a2a2a; margin: 50px 0;">
                 <div class="deep-dive">
                     <div class="text-content">
-                        <h3>Asset Creation</h3>
-                        <p>The creation of Live2D and Spine2D playable characters</p>
+                        <h3>Inventory System</h3>
+                        <p>Inventory system that contains consumables, key items, equippable items such as weapons, flashlights, and traps that can be placed.
+                        The inventory has data persistence and can be rearranged as the player wishes. The player may also give items to their party members.</p>
                     </div>
                     <div class="media-content">
-                        <img src="TrashThroughTheDimensionsGIF2.gif" alt="Live2D animations">
+                        <img src="Inventory.png" alt="Inventory">
+                    </div>
+                </div>
+                <div class="deep-dive">
+                    <div class="text-content">
+                        <h3>Quest System and Quest Log</h3>
+                        <p>An advanced quest system that allows for any type of quest. The quest supports long quests with requirements, various steps, as well as quest rewards and world manipulation depending on their progress.
+                        In The Ghost Of Us, quests affect the environment, such as in the aquarium, fixing the power issues opens the main entry and exit to the Jellyfish Exhibit. NPCs also change their
+                        dialogue to reflect the changes in quest progression.</p>
+                    </div>
+                    <div class="media-content">
+                        <img src="QuestLog.png" alt="QuestLog">
+                    </div>
+                </div>
+                <div class="deep-dive">
+                    <div class="text-content">
+                        <h3>Runtime States</h3>
+                        <p>The game keeps track of runtime states. This is used to track the completion of the initial three adventures to unlock the Festival. Additionally, destructible objects remain destroyed,
+                        respawn after a timer, and allows cross scene state tracking such as whether the player has triggered the aquarium lights.</p>
+                    </div>
+                    <div class="media-content">
+                        <img src="Project2G7.png" alt="Runtime States">
+                    </div>
+                </div>
+                <div class="deep-dive">
+                    <div class="text-content">
+                        <h3>Puzzles</h3>
+                        <p>A puzzle minigame for the player to solve by collecting clues at the aquarium</p>
+                    </div>
+                    <div class="media-content">
+                        <img src="Minigame.gif" alt="Live2D animations">
+                    </div>
+                </div>
+                <div class="deep-dive">
+                    <div class="text-content">
+                        <h3>Party System</h3>
+                        <p>The Party System allows the player to switch and control any member of the party. Party members can follow the player,
+                        support them in combat. Party members can be downed, where they can be revived by the player and other party members. They can also revive the player and
+                        have different priorities based on their various factors such as their affinity.</p>
+                    </div>
+                    <div class="media-content">
+                        <img src="Project2G3.png" alt="Live2D animations">
+                    </div>
+                </div>
+
+                <div class="deep-dive">
+                    <div class="Dialogue System">
+                        <h3>Asset Creation</h3>
+                        <p>An advanced dialogue system that supports sprite/Live2D characters, as well as their animations/expression
+                        changes. The dialogue system allows characters to move, SFX/music to be played, player choices, and affect run time states.</p>
+                    </div>
+                    <div class="media-content">
+                        <img src="Project2G1.png" alt="Live2D animations">
+                    </div>
+                </div>
+                <div class="deep-dive">
+                    <div class="text-content">
+                        <h3>Interactable Environment</h3>
+                        <p>Interactable Environments for the player to engage with</p>
+                    </div>
+                    <div class="media-content">
+                        <img src="InteractableDemo.gif" alt="Live2D animations">
+                    </div>
+                </div>
+                <div class="deep-dive">
+                    <div class="text-content">
+                        <h3>Asset Creation</h3>
+                        <p>The creation of Sprites, illustrations, game assets, UI, and Spine2D playable characters</p>
+                    </div>
+                    <div class="media-content">
+                        <img src="Running.gif" alt="Live2D animations">
                     </div>
                 </div>
             </div>
