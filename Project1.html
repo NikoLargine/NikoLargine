@@ -255,6 +255,40 @@
             color: var(--accent-color);
         }
 
+        /* Project Page External Links Button */
+        .project-links {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .project-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: transparent;
+            color: var(--accent-color);
+            padding: 12px 25px;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            border: 2px solid var(--accent-color);
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .project-button:hover {
+            background-color: var(--accent-color);
+            color: #121212; /* Dark background color for text */
+            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .project-button i {
+            font-size: 1.2rem;
+        }
+
         /* Tools & Technologies */
         .tech-grid {
             display: grid;
@@ -429,6 +463,11 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/L5GFKvOxC2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <p>Alongside of a group of mysterious students, embark on an inter-dimensional quest to save their world from trash... and learn how to clean up their own trash!</p>
+                <div class="project-links">
+            <a href="https://nikolargine.itch.io/trashthroughthedimensions" target="_blank" rel="noopener noreferrer" class="project-button">
+                <i class="fa-brands fa-itch-io"></i> Play on itch.io
+            </a>
+        </div>
             </div>
         </section>
 
