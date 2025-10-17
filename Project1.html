@@ -234,6 +234,21 @@
             height: 100%;
         }
 
+        /* Gameplay Showcase Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        /* Make the grid responsive for mobile */
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Role & Responsibilities */
         .role-list {
             list-style: none;
@@ -525,6 +540,28 @@
                     </div>
                     <div class="media-content">
                         <img src="TrashThroughTheDimensionsGIF2.gif" alt="Live2D animations">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="showcase" class="scroll-target">
+            <h2>Gameplay Showcase</h2>
+            <div class="content-card">
+                <p>[Your descriptive paragraph goes here. You can talk about the game's core loop, the player experience you aimed for, and what challenges or fun moments viewers should look for in the videos below.]</p>
+
+                <div class="video-grid">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Playthrough Part 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Playthrough Part 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Playthrough Part 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" title="Playthrough Part 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
