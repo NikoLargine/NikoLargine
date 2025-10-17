@@ -176,6 +176,37 @@
             color: #121212;
         }
 
+        .back-link {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            z-index: 10;
+        }
+
+        .back-link:hover {
+            color: white;
+            transform: translateX(-5px);
+        }
+
+        .back-link i {
+            margin-right: 8px;
+        }
+
+        /* Make it responsive for mobile */
+        @media (max-width: 768px) {
+            .back-link {
+                top: 20px;
+                left: 20px;
+                font-size: 0.9rem;
+            }
+        }
+
         /* ------------------- */
         /* 3. Content Sections */
         /* ------------------- */
@@ -382,7 +413,8 @@
     <header class="hero" id="home">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <h1>[Trash Through the Dimensions]</h1>
+            <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+            <h1>Trash Through the Dimensions</h1>
             <h2>A Game by Niko Largine</h2>
             <a href="#overview" class="hero-button">View Project</a>
         </div>
@@ -403,7 +435,10 @@
         <section id="role" class="scroll-target">
             <h2>My Role: Solo Developer</h2>
             <div class="content-card">
-                <p>[As a solo developer, the project was created for the Ubisoft 2024 Game Jam in 14 days, which 9 were spent on the Live2D characters. The project encompasses Live2D characters, Spine2D playable characters, unique weapon for combat (suction cannon), a boss battle, various systems such as an inventory system, dialogue/ VN system, save load, party system, quest system, as well as various unique 2D environments for the player to explore and experience.]</p>
+                <p>As a solo developer, the project was created for the Ubisoft 2024 Game Jam in 14 days, which 9 were spent on the Live2D characters.
+                    The project encompasses Live2D characters, Spine2D playable characters, unique weapon for combat (suction cannon), a boss battle,
+                    various systems such as an inventory system, dialogue/ VN system,
+                    save load, party system, quest system, as well as various unique 2D environments for the player to explore and experience.</p>
                 <ul class="role-list">
                     <li>Gameplay Programming & Systems Design (C#)</li>
                     <li>UI/UX Design & Implementation</li>
@@ -436,8 +471,9 @@
             <div class="content-card">
                 <div class="deep-dive">
                     <div class="text-content">
-                        <h3>[Advanced game systems]</h3>
-                        <p>[The player must traverse the world and follow the story to the end. To make this happen, the player needed a quest system, coupled with a save and load system, allowing them to progress through the game's various scenes.]</p>
+                        <h3>Advanced game systems</h3>
+                        <p>The player must traverse the world and follow the story to the end. To make this happen,
+                            the player needed a quest system, coupled with a save and load system, allowing them to progress through the game's various scenes.</p>
                     </div>
                     <div class="media-content">
                         <img src="TrashThroughTheDimensionsGIF1.gif" alt="[Game systems]">
@@ -446,8 +482,8 @@
                 <hr style="border: 1px solid #2a2a2a; margin: 50px 0;">
                 <div class="deep-dive">
                     <div class="text-content">
-                        <h3>[Asset Creation]</h3>
-                        <p>[The creation of Live2D and Spine2D playable characters]</p>
+                        <h3>Asset Creation</h3>
+                        <p>The creation of Live2D and Spine2D playable characters</p>
                     </div>
                     <div class="media-content">
                         <img src="TrashThroughTheDimensionsGIF2.gif" alt="Live2D animations">
@@ -481,7 +517,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 [Nicholas Morris]</p>
+        <p>&copy; 2025 Nicholas Morris</p>
     </footer>
 
     <div class="lightbox" id="lightbox">
