@@ -316,6 +316,30 @@
             font-weight: 400;
         }
 
+        /* Style for feature list in deep dive */
+        .feature-list {
+            list-style: none; /* Removes default black dot */
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        .feature-list li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 15px;
+            color: var(--text-muted);
+        }
+
+        .feature-list li::before {
+            content: '\f105'; /* Font Awesome angle-right icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: var(--accent-color);
+        }
+
         /* Technical Deep Dive */
         .deep-dive {
             display: flex;
@@ -635,6 +659,7 @@
                     <img src="Project2G5.png" alt="Game Screenshot 5">
                     <img src="Project2G6.png" alt="Game Screenshot 6">
                     <img src="Project2G7.png" alt="Game Screenshot 7">
+                    <img src="Beach.png" alt="Game Screenshot ">
                 </div>
             </div>
         </section>
