@@ -217,6 +217,54 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
+        /* Style for the single showcase image */
+        .image-showcase-container {
+            margin-top: 30px;
+        }
+
+        .image-showcase-container img {
+            width: 100%; /* Make it fill the container's width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Match the site's aesthetic */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4); /* Match other media */
+            display: block;
+        }
+
+        /* Style for the Video + Image 2-Column Grid */
+        .media-pair-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+            align-items: start; /* Aligns items to the top */
+        }
+
+        .media-item {
+            /* This is a simple container */
+        }
+
+        /* Styles for the accompanying image(s) */
+        .showcase-sub-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+            display: block;
+        }
+
+        /* Adds space if you stack multiple images in the 2nd column */
+        .showcase-sub-image:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+
+        /* Make the grid responsive for mobile */
+        @media (max-width: 768px) {
+            .media-pair-grid {
+                grid-template-columns: 1fr; /* Stacks the columns */
+            }
+        }
+
         /* Video Embed */
         .video-wrapper {
             position: relative;
@@ -644,8 +692,31 @@
             </div>
         </section>
 
+        <section id="shader-showcase" class="scroll-target">
+            <h2>Shader Showcase: Dynamic Lava + Directional aiming</h2>
+            <div class="content-card">
+                <p>Using stochastic texturing shader to add randomness to the repeating lava, the 2D shader graph also provides rotation and translation to provide dynamically moving lava in the dungeons. The video also shows
+                the full 2D directional aiming of the Spine2D, allowing characters to aim and attack in all directions with their animated sprite.</p>
+
+                <div class="media-pair-grid">
+
+                    <div class="media-item">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/thfFoAYayh4" title="Lava Shader Showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="media-item">
+                        <img src="stochasticMoving.png" alt="[Lava Shader Graph]" class="showcase-sub-image">
+
+                        </div>
+
+                </div>
+            </div>
+        </section>
+
         <section id="MushroomKingdom" class="scroll-target">
-            <h2>Training Grounds</h2>
+            <h2>Mushroom Kingdom Dev Look</h2>
             <div class="content-card">
                 <p>A quick walk around one of central hubs - the mushroom Kingdom and the adjacent area. The Northern area is a scenic area that surrounds the Kingdom</p>
 
@@ -656,7 +727,7 @@
         </section>
 
         <section id="EnemyCamp" class="scroll-target">
-            <h2>Training Grounds</h2>
+            <h2>Enemy Camp testing</h2>
             <div class="content-card">
                 <p>Dev Log testing the first encounter/raid against the Boar Camp in the main quest. The player and his party he recruits uses crafted/looted weapons/abilities to navigate and destroy the enemy camp.</p>
 
@@ -667,7 +738,7 @@
         </section>
 
         <section id="Farm" class="scroll-target">
-            <h2>Training Grounds</h2>
+            <h2>Farming / Neutral creatures</h2>
             <div class="content-card">
                 <p>As part of the Kingdom building, there are neutral animals which the player can farm. Cows can be milked, chickens drop eggs, and other animals can be slaughtered for their items such as leather and meat.</p>
 
@@ -688,11 +759,71 @@
             </div>
         </section>
 
+        <section id="BaseBuilding" class="scroll-target">
+            <h2>Kingdom Building + Storage + Crafting</h2>
+            <div class="content-card">
+                <p>The game features an extensive Kingdom building system. In the video, I use a hidden storage chest to get materials for the showcase. The storage is persistent, and allows retrieval and depositing of items.
+                The game features a HQ, which starts as a tent, and as it is upgraded changes into a larger structure. In the video it starts as a small tent at level 1, and becomes a larger tent at level 2. Upgrading the HQ provides numerous benefits.
+                Upgrading buildings provide benefits such as increased stats, healing buffs; farm buildings give item production; research buildings reduce upgrade costs; and buildings like the smithy in the video unlock new tiers of crafting recipes
+                such as wooden and stone tools/weapons. There are also defensive buildings such as the archer towers, which may be upgraded to help with Kingdom defense missions. The Kingdom follows the day night cycle, so light crystals can be created.</p>
+
+                <div class="video-wrapper" style="margin-top: 30px;">
+                    <iframe src="https://www.youtube.com/embed/ymuvCYOTrsg" title="Vaults" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="BaseBuilding2" class="scroll-target">
+            <h2>Kingdom Building 2</h2>
+            <div class="content-card">
+                <p>Second video of the base building show case</p>
+
+                <div class="video-wrapper" style="margin-top: 30px;">
+                    <iframe src="https://www.youtube.com/embed/fxfIyDGcjKg" title="Vaults" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="DayNight" class="scroll-target">
+            <h2>Day/Night System</h2>
+            <div class="content-card">
+                <p>The Day Night system runs on a time system and affects various aspects of the game, most notably the lighting. Players can sleep to pass eight hours to skip night.</p>
+
+                <div class="video-wrapper" style="margin-top: 30px;">
+                    <iframe src="https://www.youtube.com/embed/45KIks4l8Ec" title="Vaults" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="Harvesting" class="scroll-target">
+            <h2>Dungeons + Harvesting</h2>
+            <div class="content-card">
+                <p>The player can give items to party members, such as harvesting tools to help to harvest many of the various resources. Harvesting tools can also be used to destroy buildings/fortifications (e.g wooden walls can be destroyed
+                by an axe more easily). Different tools are more effective of different resource types. Currently, there are wooden, rock/stone/mineral, and ground types (e.g sand). There are different tiers of resources, which have a minimum
+                harvesting value, encouraging players to upgrade their gear to access higher level resources, like in many other games such as minecraft. Tools also have durability.</p>
+
+                <div class="video-wrapper" style="margin-top: 30px;">
+                    <iframe src="https://www.youtube.com/embed/sPQzzKRx5iA" title="Vaults" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="showcase-image" class="scroll-target">
+            <h2>Visual Novel Shaders</h2>
+            <div class="content-card">
+                <p>The Visual Novel system uses shaders for transitioning sprites, backgrounds and cinematics</p>
+
+                <div class="image-showcase-container">
+                    <img src="VNShaderGraph.png" alt="[Descriptive alt text for the image]">
+                </div>
+            </div>
+        </section>
+
         <section id="gallery" class="scroll-target">
             <h2>In-Game Gallery</h2>
             <div class="content-card">
                 <div class="gallery-grid">
-                    <img src="Project2G1.png" alt="Game Screenshot 1">
+                    <img src="Project3G1.png" alt="Game Screenshot 1">
                     <img src="Project2G2.png" alt="Game Screenshot 2">
                     <img src="Project2G3.png" alt="Game Screenshot 3">
                     <img src="Project2G4.png" alt="Game Screenshot 4">
