@@ -581,33 +581,34 @@
             <div class="content-card">
                 <div class="deep-dive">
                     <div class="text-content">
-                        <h3>Unity Lighting system</h3>
-                        <p>To enhance the magic of the aquarium experience, runtime states were used to track the aquarium lighting, allowing the player to control and interact with their environment.</p>
+                        <h3>Traps/Item placement feature</h3>
+                        <p>The trap/item placement feature allows traps and other items to be placed in scenes. Their position is recorded, allowing traps/items.furniture
+                        to be placed safely and retain their data persistence</p>
                     </div>
                     <div class="media-content">
-                        <img src="LightsDemo.gif" alt="[Game systems]">
+                        <img src="Traps.gif" alt="[Game systems]">
                     </div>
                 </div>
                 <hr style="border: 1px solid #2a2a2a; margin: 50px 0;">
                 <div class="deep-dive">
                     <div class="text-content">
-                        <h3>Inventory System</h3>
-                        <p>Inventory system that contains consumables, key items, equippable items such as weapons, flashlights, and traps that can be placed.
-                        The inventory has data persistence and can be rearranged as the player wishes. The player may also give items to their party members.</p>
+                        <h3>Object pooling and other optimisations</h3>
+                        <p>Due to the large number of items that may be placed at any time, the game uses object pooling system to place pre-existing objects, removing the
+                        need to create them on the fly. The system also merges large numbers of untouched numbers, similar to minecraft where their quantities are merged into a single block.</p>
                     </div>
                     <div class="media-content">
-                        <img src="Inventory.png" alt="Inventory">
+                        <img src="ObjectPooling.png" alt="Inventory">
                     </div>
                 </div>
                 <div class="deep-dive">
                     <div class="text-content">
-                        <h3>Quest System and Quest Log</h3>
-                        <p>An advanced quest system that allows for any type of quest. The quest supports long quests with requirements, various steps, as well as quest rewards and world manipulation depending on their progress.
-                        In The Ghost Of Us, quests affect the environment, such as in the aquarium, fixing the power issues opens the main entry and exit to the Jellyfish Exhibit. NPCs also change their
-                        dialogue to reflect the changes in quest progression.</p>
+                        <h3>Ability System</h3>
+                        <p>The game has a expansive ability/spell casting system that allows players and party members to use different types of abilities, whether offensive, supporting or healing.
+                        Each ability has its own progression/mastery, allowing abilities to be levelled up and improved. There are multiple skill sets, allowing players to create and cycle through
+                        various abilities.</p>
                     </div>
                     <div class="media-content">
-                        <img src="QuestLog.png" alt="QuestLog">
+                        <img src="Abilities.png" alt="QuestLog">
                     </div>
                 </div>
                 <div class="deep-dive">
@@ -821,17 +822,23 @@
 
         <section id="gallery" class="scroll-target">
             <h2>In-Game Gallery</h2>
-            <div class="content-card">
-                <div class="gallery-grid">
-                    <img src="Project3G1.png" alt="Game Screenshot 1">
-                    <img src="Project2G2.png" alt="Game Screenshot 2">
-                    <img src="Project2G3.png" alt="Game Screenshot 3">
-                    <img src="Project2G4.png" alt="Game Screenshot 4">
-                    <img src="Project2G5.png" alt="Game Screenshot 5">
-                    <img src="Project2G6.png" alt="Game Screenshot 6">
-                    <img src="Project2G7.png" alt="Game Screenshot 7">
-                    <img src="Beach.png" alt="Game Screenshot ">
-                </div>
+            <div class="gallery-grid">
+                <img src="Project3G1.png" alt="Game Screenshot 1">
+                <img src="Project3G2.png" alt="Game Screenshot 2">
+                <img src="Project3G3.png" alt="Game Screenshot 3">
+                <img src="Project3G4.png" alt="Game Screenshot 4">
+                <img src="Project3G5.png" alt="Game Screenshot 5">
+                <img src="Project3G6.png" alt="Game Screenshot 6">
+                <img src="Project3G7.png" alt="Game Screenshot 7">
+                <img src="Project3G8.png" alt="Game Screenshot 8">
+                <img src="Project3G9.png" alt="Game Screenshot 9">
+                <img src="Project3G10.png" alt="Game Screenshot 10">
+                <img src="Project3G11.png" alt="Game Screenshot 11">
+                <img src="Project3G12.png" alt="Game Screenshot 12">
+                <img src="Project3G13.png" alt="Game Screenshot 13">
+                <img src="Project3G14.png" alt="Game Screenshot 14">
+                <img src="Project3G15.png" alt="Game Screenshot 15">
+
             </div>
         </section>
         
