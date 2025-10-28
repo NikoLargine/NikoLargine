@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>[Your Name] - Other Projects</title>
+
+    <style>
+        /* Import Fonts from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400&display=swap');
+
+        /* --- Global Theme & Variables --- */
+        :root {
+            --background-color: #121212;
+            --panel-color: #1E1E1E;
+            --text-color: #EAEAEA;
+            --accent-color: #00BFFF; /* DeepSkyBlue */
+            --container-width: 1000px;
+            --border-radius: 8px;
+            --transition-speed: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            font-size: 18px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* --- Layout & Typography --- */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--accent-color);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: var(--text-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        /* --- Project List Styles --- */
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .project-item {
+            background-color: var(--panel-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn-view-pdf {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #FFF;
+            background-color: var(--accent-color);
+            border: none;
+            border-radius: 5px;
+            padding: 12px 24px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+        }
+
+        .btn-view-pdf:hover {
+            background-color: #009acd; /* A slightly darker blue on hover */
+            transform: translateY(-2px);
+        }
+
+        /* --- PDF Viewer Container --- */
+        .pdf-viewer {
+            /* This is hidden by default because it's empty */
+            display: none;
+            margin-top: 30px;
+
+            /* Ensures the embed is responsive but has a max height */
+            height: 800px; /* Adjust as needed */
+            width: 100%;
+        }
+
+        .pdf-viewer embed {
+            border-radius: var(--border-radius);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Other Projects</h1>
+            <p class="page-subtitle">A collection of design documents, technical papers, and case studies. <br>Click to load and view the embedded PDF.</p>
+        </header>
+
+        <main>
+            <div class="project-list">
+
+                <div class="project-item">
+                    <h3>Maya Character Design</h3>
+                    <p>
+                        Design, rigging, texturing, blend shapes and animating of a basic humanoid character in Maya
+                    </p>
+
+                    <button class="btn-view-pdf" data-pdf-src="CharacterDesign3DJournal1.pdf">View PDF</button>
+
+                    <div class="pdf-viewer"></div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Maya Character Design continued</h3>
+                    <p>
+
+                    </p>
+                    <button class="btn-view-pdf" data-pdf-src="CharacterDesign3DJournal">View PDF</button>
+                    <div class="pdf-viewer"></div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Maya Design</h3>
+                    <p>
+                        Modelling, texturing and rigging of a robot in Maya
+                    </p>
+                    <button class="btn-view-pdf" data-pdf-src="IronGiant.pdf">View PDF</button>
+                    <div class="pdf-viewer"></div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Maya Design</h3>
+                    <p>
+                        Modelling and texturing of a game ready object in Maya
+                    </p>
+                    <button class="btn-view-pdf" data-pdf-src="Letterbox.pdf">View PDF</button>
+                    <div class="pdf-viewer"></div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Creating models and scenes in Unreal Engine</h3>
+                    <p>
+                        Modelling and texturing of a game ready object in Maya, Creating assets and a scene in Unreal Engine with various lighting, animations, effects, etc
+                    </p>
+                    <button class="btn-view-pdf" data-pdf-src="Head.pdf">View PDF</button>
+                    <div class="pdf-viewer"></div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Creating models and scenes in Unreal Engine Continued</h3>
+                    <p>
+
+                    </p>
+                    <button class="btn-view-pdf" data-pdf-src="Head2.pdf">View PDF</button>
+                    <div class="pdf-viewer"></div>
+                </div>
+
+                </div>
+        </main>
+
+    </div>
+
+    <script>
+        // Wait for the DOM to be fully loaded before attaching event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all the PDF view buttons
+            const viewButtons = document.querySelectorAll('.btn-view-pdf');
+
+            // Add a click event listener to each button
+            viewButtons.forEach(button => {
+                button.addEventListener('click', () => {
+
+                    // 1. Find the parent .project-item
+                    const projectItem = button.closest('.project-item');
+
+                    // 2. Find the .pdf-viewer container *within* that item
+                    const pdfViewer = projectItem.querySelector('.pdf-viewer');
+
+                    // 3. Get the PDF's filename from the button's data attribute
+                    const pdfSrc = button.getAttribute('data-pdf-src');
+
+                    // 4. Check if the viewer is already open (if it has content)
+                    if (pdfViewer.innerHTML !== '') {
+                        // --- IT'S OPEN: Close it ---
+
+                        // Clear the content (this unloads the PDF)
+                        pdfViewer.innerHTML = '';
+
+                        // Hide the container
+                        pdfViewer.style.display = 'none';
+
+                        // Change button text back
+                        button.textContent = 'View PDF';
+
+                    } else {
+                        // --- IT'S CLOSED: Open it ---
+
+                        // Create the <embed> tag as a string
+                        // This dynamically creates the element and loads the PDF
+                        const embedCode = `
+                            <embed
+                                src="${pdfSrc}"
+                                type="application/pdf"
+                                width="100%"
+                                height="100%"
+                            >
+                        `;
+
+                        // Inject the code into the viewer div
+                        pdfViewer.innerHTML = embedCode;
+
+                        // Show the container
+                        pdfViewer.style.display = 'block';
+
+                        // Change button text
+                        button.textContent = 'Close PDF';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
