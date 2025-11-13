@@ -483,185 +483,23 @@
             <h2>Overview & Highlight Reel</h2>
             <div class="content-card">
                 <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-cigF5MzsDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4pZsjxCGfC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <p>WIP WIP WIP WIP </p>
+                <p>WIP game focused on ranged weapons like guns with a 007 spy theme </p>
                 <div class="project-links">
-            <a href="https://nikolargine.itch.io/ghost-of-us" target="_blank" rel="noopener noreferrer" class="project-button">
-                <i class="fa-brands fa-itch-io"></i> Play on itch.io
-            </a>
+
         </div>
             </div>
         </section>
 
-        <section id="role" class="scroll-target">
-            <h2>My Role: Solo Developer</h2>
-            <div class="content-card">
-                <p>As a solo developer, the project was created as a fun personal project. The project focuses on Sprite characters, Spine2D playable characters, and a believable, interactable environments to enchance the player experience on their adventure.
-                    It expands on the systems in Trash Through The Dimensions, introducing more streamlined interactions, advanced inventory systems, shop systems, and more.</p>
-                <ul class="role-list">
-                    <li>Gameplay Programming & Systems Design (C#)</li>
-                    <li>UI/UX Design & Implementation</li>
-                    <li>Spine2D animated characters</li>
-                    <li>Sprite characters with various poses and expressions</li>
-                    <li>Story and Dialogue</li>
-                    <li>Sound Design & Integration</li>
-                    <li>Game and Level Design</li>
-                    <li>Project Management & Version Control (Git)</li>
-                </ul>
-            </div>
-        </section>
 
-        <section id="tech" class="scroll-target">
-            <h2>Tools & Technologies</h2>
-            <div class="content-card">
-                <div class="tech-grid">
-                    <div class="tech-item"><i class="fa-brands fa-unity"></i><span>Unity</span></div>
-                    <div class="tech-item"><i class="fa-solid fa-code"></i><span>C#</span></div>
-                    <div class="tech-item"><i class="fa-solid fa-palette"></i><span>Live2D</span></div>
-                    <div class="tech-item"><i class="fa-solid fa-cube"></i><span>Spine2D</span></div>
-                    <div class="tech-item"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
-                    <div class="tech-item"><i class="fa-solid fa-image"></i><span>Photoshop</span></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="deep-dive" class="scroll-target">
-            <h2>Technical Deep Dive</h2>
-            <div class="content-card">
-                <div class="deep-dive">
-                    <div class="text-content">
-                        <h3>Unity Lighting system</h3>
-                        <p>To enhance the magic of the aquarium experience, runtime states were used to track the aquarium lighting, allowing the player to control and interact with their environment.</p>
-                    </div>
-                    <div class="media-content">
-                        <img src="LightsDemo.gif" alt="[Game systems]">
-                    </div>
-                </div>
-                <hr style="border: 1px solid #2a2a2a; margin: 50px 0;">
-                <div class="deep-dive">
-                    <div class="text-content">
-                        <h3>Inventory System</h3>
-                        <p>Inventory system that contains consumables, key items, equippable items such as weapons, flashlights, and traps that can be placed.
-                        The inventory has data persistence and can be rearranged as the player wishes. The player may also give items to their party members.</p>
-                    </div>
-                    <div class="media-content">
-                        <img src="Inventory.png" alt="Inventory">
-                    </div>
-                </div>
-                <div class="deep-dive">
-                    <div class="text-content">
-                        <h3>Quest System and Quest Log</h3>
-                        <p>An advanced quest system that allows for any type of quest. The quest supports long quests with requirements, various steps, as well as quest rewards and world manipulation depending on their progress.
-                        In The Ghost Of Us, quests affect the environment, such as in the aquarium, fixing the power issues opens the main entry and exit to the Jellyfish Exhibit. NPCs also change their
-                        dialogue to reflect the changes in quest progression.</p>
-                    </div>
-                    <div class="media-content">
-                        <img src="QuestLog.png" alt="QuestLog">
-                    </div>
-                </div>
-                <div class="deep-dive">
-                    <div class="text-content">
-                        <h3>Runtime States</h3>
-                        <p>The game keeps track of runtime states. This is used to track the completion of the initial three adventures to unlock the Festival. Additionally, destructible objects remain destroyed,
-                        respawn after a timer, and allows cross scene state tracking such as whether the player has triggered the aquarium lights.</p>
-                    </div>
-                    <div class="media-content">
-                        <img src="Project2G7.png" alt="Runtime States">
-                    </div>
-                </div>
-                <div class="deep-dive">
-                    <div class="text-content">
-                        <h3>Puzzles</h3>
-                        <p>A puzzle minigame for the player to solve by collecting clues at the aquarium</p>
-                    </div>
-                    <div class="media-content">
-                        <img src="Minigame.gif" alt="Live2D animations">
-                    </div>
-                </div>
-                <div class="deep-dive">
-                    <div class="text-content">
-                        <h3>Party System</h3>
-                        <p>The Party System allows the player to switch and control any member of the party. Party members can follow the player,
-                        support them in combat. Party members can be downed, where they can be revived by the player and other party members. They can also revive the player and
-                        have different priorities based on their various factors such as their affinity.</p>
-                    </div>
-                    <div class="media-content">
-                        <img src="Project2G3.png" alt="Live2D animations">
-                    </div>
-                </div>
-
-                <div class="deep-dive">
-                    <div class="Dialogue System">
-                        <h3>Asset Creation</h3>
-                        <p>An advanced dialogue system that supports sprite/Live2D characters, as well as their animations/expression
-                        changes. The dialogue system allows characters to move, SFX/music to be played, player choices, and affect run time states.</p>
-                    </div>
-                    <div class="media-content">
-                        <img src="Project2G1.png" alt="Live2D animations">
-                    </div>
-                </div>
-                <div class="deep-dive">
-                    <div class="text-content">
-                        <h3>Interactable Environment</h3>
-                        <p>Interactable Environments for the player to engage with</p>
-                    </div>
-                    <div class="media-content">
-                        <img src="InteractableDemo.gif" alt="Live2D animations">
-                    </div>
-                </div>
-                <div class="deep-dive">
-                    <div class="text-content">
-                        <h3>Asset Creation</h3>
-                        <p>The creation of Sprites, illustrations, game assets, UI, and Spine2D playable characters</p>
-                    </div>
-                    <div class="media-content">
-                        <img src="Running.gif" alt="Live2D animations">
-                    </div>
-                </div>
-                <div class="deep-dive">
-                    <div class="text-content">
-                        <h3>Shop System</h3>
-                        <p>The shop system allows the player to purchase items, adding a sense of immersion.</p>
-                    </div>
-                    <div class="media-content">
-                        <img src="Project2G2.png" alt="Live2D animations">
-                    </div>
-                </div>
-                <div class="deep-dive">
-                    <div class="text-content">
-                        <h3>Other Features</h3>
-
-                        <ul class="feature-list">
-                            <li><b>Dynamic Audio:</b> Sound effects dynamically adjust based on player proximity, creating a deeper sense of immersion.</li>
-                            <li><b>4 Distinct Environments:</b> Each with unique adventures and challenges.</li>
-                            <li><b>Equippable items: </b> such as the flashlight and weapons which possess various parameters such as durability.</li>
-                            <li><b>Interactive Minigames:</b> Including a Haunted House and a Shooting Range.</li>
-                            <li><b>NPC Management System:</b> For characters like the mushroom folk, Alice, and Karen.</li>
-                            <li><b>Core Systems:</b> A full Save/Load system and an Ability system for special gameplay sequences.</li>
-                            <li><b>Accessibility Options:</b> Includes adjustable text speed and volume controls.</li>
-                            <li><b>Advanced Ability System</b> Details on the ability/crafting systems are further explained In Lost Kingdoms Project.</li>
-                        </ul>
-                    </div>
-                    <div class="media-content">
-                        <img src="Beach.png" alt="Beach environment from the game">
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section id="gallery" class="scroll-target">
             <h2>In-Game Gallery</h2>
             <div class="content-card">
                 <div class="gallery-grid">
-                    <img src="Project2G1.png" alt="Game Screenshot 1">
-                    <img src="Project2G2.png" alt="Game Screenshot 2">
-                    <img src="Project2G3.png" alt="Game Screenshot 3">
-                    <img src="Project2G4.png" alt="Game Screenshot 4">
-                    <img src="Project2G5.png" alt="Game Screenshot 5">
-                    <img src="Project2G6.png" alt="Game Screenshot 6">
-                    <img src="Project2G7.png" alt="Game Screenshot 7">
-                    <img src="Beach.png" alt="Game Screenshot ">
+                    <img src="Project4G1.png" alt="Game Screenshot 1">
+
                 </div>
             </div>
         </section>
